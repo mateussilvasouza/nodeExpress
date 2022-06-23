@@ -1,6 +1,6 @@
 const fs = require('fs')
 
-const {join} = fs
+const {join} = require('path')
 
 const filePath = join(__dirname, 'users.json')
 
@@ -25,5 +25,6 @@ const userRoute = (app) => {
 
             res.send({ users })
         })
-
 }
+
+module.exports(userRoute)
